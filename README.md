@@ -1,13 +1,10 @@
-# Oil & Gas Stock Pitch
+# Oil & Gas Stock Pitch: Aker BP (Ticker: AKRBF)
 
 ## Objective:
-- Identify 1-2 stocks
 - Identify relevant KPIs and drivers
 - Identify potential alternative data sources to approximate KPIs and drivers
 - Develop proof-of-concept
 - Summarize process, assumptions, relevancy and potential investment strategy
-
-# Aker BP (Ticker: AKRBF)
 
 ### Company Overview:
 Aker BP ASA is a Norwegian oil exploration and development company focused on the production of oil and gas on the Norwegian Continental Shelf.
@@ -54,13 +51,16 @@ So why does this matter? The key is whether the real-time satellite/weather imag
 
 ## Assumptions
 Throughout my analysis, I made a number of assumptions about oil field productions, revenues and capital expenditures in the instances where a field was co-owned by 2 or more operators. 
+
 The Norwegian Petroleum Directorate regularly updates its database with the percentages of ownership for each drilling operator at a given field. For example, in October 2004, Aker BP had 80% ownership of the Alvheim field while ConocoPhillips Skandinavia owned the remaining 20%. As such, in order to compute Aker BP’s total net oil equivalent production (in million Sm3), I multiplied the total net production per site by Aker BP’s company share percentage. Similarly, I multiplied total investment (in NOK) per site by Aker BP’s company share of the site to compute Aker BP’s total investment in that site. Lastly, I applied the same computation to calculate Aker BP’s total reserves at each operational site.
 Across the different Norwegian petroleum databases, there was no standard approach to classifying whether a site was in an exploratory or abandoned phase. As such, I mapped all sites on the Norwegian Petroleum Directorate with an activity status of “Production likely, but unclarified” as “Exploratory” and those with “Production not evaluated” as “Abandoned”.  
+
 Lastly, I retrieved Norway’s household consumption index from Statistics Norway to measure the percentage of their wallets that Norwegian consumers have spent at the pump over time. There are two caveats associated with this index:
-Firstly, these are seasonally-adjusted figures which have been normalized such that reported figures in 2005 are the baseline (i.e. 100). Therefore, we can interpret that any increase represents a higher proportion of wallet spend for a given expense category.
-Secondly, consumer spending at the pump fell under the “Purchases of vehicles and petrol” category, therefore, any overall changes in trends may not be directly attributable to petrol spending alone.
+  - Firstly, these are seasonally-adjusted figures which have been normalized such that reported figures in 2005 are the baseline (i.e. 100). Therefore, we can interpret that any increase represents a higher proportion of wallet spend for a given expense category.
+  - Secondly, consumer spending at the pump fell under the “Purchases of vehicles and petrol” category, therefore, any overall changes in trends may not be directly attributable to petrol spending alone.
 
 ## Next Steps:
-Conduct deeper dive into weather pattern data in Norwegian Continental Shelf from MET Norway
-Incorporate Q3 earnings results (October 27th, 2023)
-Run backtests of approximations against previously reported earnings figures
+
+1. Conduct deeper dive into weather pattern data in Norwegian Continental Shelf from MET Norway
+2. Incorporate Q3 earnings results (October 27th, 2023)
+3. Run backtests of approximations against previously reported earnings figures
